@@ -1,0 +1,41 @@
+ :root{
+    --baner-color: #4A6572;
+    --panel-lewy-color:#88B04B ;
+    --panel-prawy-color:#F0F8EA ;
+    --stopka-color:#4A6572 ;
+    --hover-color:
+}
+.baner{
+    background-color: var(--baner-color);
+    height: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+}
+.panel-lewy{
+    float: left;
+    background-color: var(--panel-lewy-color);
+    height: 600px;
+    width: 25%;
+    text-align: center;
+}
+.panel-prawy{
+    float: right;
+    background-color: var(--panel-prawy-color);
+    height: 600px;
+    width: 75%;
+    text-align: center;
+}
+.stopka{
+    background-color: var(--stopka-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: right;
+}
+.form{
+    justify-items: center;
+    width: 150px;
+}
+.table{
+    margin: 30px;
+    border: 1px color black solid;
+    width: 80%;
+}
