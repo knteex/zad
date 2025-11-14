@@ -1,58 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
-
 <body>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById("oblicz");
-    const wynik = document.getElementById("wynik");
 
-    btn.addEventListener("click", function() {
-        const waga = parseFloat(document.getElementById("waga").value);
-        const wzrost = parseFloat(document.getElementById("wzrost").value);
+    <div class="baner"></div>
 
-        if (isNaN(waga) || waga <= 0 || isNaN(wzrost) || wzrost <= 0) {
-            wynik.style.color = "red";
-            wynik.textContent = "Wprowadź poprawne dane!";
-            return;
-        }
-
-        const bmi = waga / Math.pow(wzrost / 100, 2);
-
-        let klasyfikacja = "";
-        let kolor = "";
-
-        if (bmi < 18.5) {
-            klasyfikacja = "Niedowaga";
-            kolor = "blue";
-        } else if (bmi >= 18.5 && bmi <= 24.9) {
-            klasyfikacja = "Waga prawidłowa";
-            kolor = "green";
-        } else if (bmi >= 25 && bmi <= 29.9) {
-            klasyfikacja = "Nadwaga";
-            kolor = "orange";
-        } else {
-            klasyfikacja = "Otyłość";
-            kolor = "red";
-        }
-
-        wynik.style.color = kolor;
-        wynik.textContent = `Twoje BMI wynosi: ${bmi.toFixed(2)} (${klasyfikacja})`;
-    });
-});
-    </script>
-    <div class="baner">
-
-    </div>
     <div class="panel-lewy">
         <h2>Wybierz opcje</h2>
         <ul>
@@ -60,16 +19,18 @@ document.addEventListener("DOMContentLoaded", function() {
             <li><a href="o-bmi.html">Co to jest BMI?</a></li>
         </ul>
     </div>
+
     <div class="panel-prawy">
-        <h2>Oblicz swój wskażnik BMI</h2>
+        <h2>Oblicz swój wskaźnik BMI</h2>
         <form>
             <p>Waga (kg):</p><input id="waga" type="number" step="any">
-                <p>Wzrost (cm):</p><input id="wzrost" type="number" step="any">
-                    <p><button id="oblicz" type="button">Oblicz BMI</button></p>
-                        <p id="wynik"></p>
+            <p>Wzrost (cm):</p><input id="wzrost" type="number" step="any">
+            <p><button id="oblicz" type="button">Oblicz BMI</button></p>
+            <p id="wynik"></p>
         </form>
+    </div>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
